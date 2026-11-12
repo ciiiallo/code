@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gcche-go
+  # 数据库配置（这里先用你本地的 MySQL）
+  datasource:
+    url: jdbc:mysql://localhost:3306/gcche_go?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  configuration:
+    # 开启下划线转驼峰（数据库的 user_name 自动映射到 Java 的 userName）
+    map-underscore-to-camel-case: true
+    # 在控制台打印 SQL 语句，方便小白排错
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
